@@ -6,8 +6,7 @@ Self-RAG, and RAG evaluation.
 
 
 ### Late Chunking: embed first, chunk later
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/<abhis-28>/<
-agentic_ai_labs>/blob/main/01-rag-and-retrieval/Late_Chunking_Demo.ipynb)
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/abhis-28/agentic_ai_labs/blob/main/01-rag-and-retrieval/Late_Chunking_Demo.ipynb)
 
 Normal chunking splits a document and embeds each chunk alone, so a sentence like
 "With 3.7 million inhabitants, it has the highest population..." loses what "it" refers to.
@@ -31,8 +30,8 @@ a long-context embedding model that returns token-level embeddings and was train
 
 
 ### Sparse Retrieval (BM25): match exact words, no embeddings
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/<abhis-28>/<
-agentic_ai_labs>/blob/main/01-rag-and-retrieval/Sparse_Retrieval_BM25_Custom_Text.ipynb)
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/abhis-28/
+agentic_ai_labs/blob/main/01-rag-and-retrieval/Sparse_Retrieval_BM25_Custom_Text.ipynb)
 
 Sparse retrieval matches the **exact words** of a query against the words in each chunk. BM25
 scores a chunk higher when it contains words that are **rare** across the text (high IDF weight),
@@ -57,8 +56,8 @@ not how it performs on real data.
 **Setup:** add your Groq key to Colab secrets as `agentic_ai`.
 
 ### SPLADE, ColBERT and Ensemble Retrieval
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/<abhis-28>/<
-agentic_ai_labs>/blob/main/01-rag-and-retrieval/SPLADE_ColBERT_Ensemble_LangChain_Demo.ipynb)
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/abhis-28/
+agentic_ai_labs/blob/main/01-rag-and-retrieval/SPLADE_ColBERT_Ensemble_LangChain_Demo.ipynb)
 
 Three retrieval techniques compared on a short text about AI in healthcare (6 sentence chunks),
 each run through a full RAG flow (retrieve, augment, generate) with `gpt-oss-20b` on Groq:
@@ -90,8 +89,8 @@ best member. It illustrates how each method works, not how they compare on real 
 `prithivida/Splade_PP_en_v1`, `colbert-ir/colbertv2.0` and `sentence-transformers/all-MiniLM-L6-v2`.
 
 ### Self-RAG: a model that decides when to retrieve and critiques its own answers
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/<abhis-28>/<
-agentic_ai_labs>/blob/main/01-rag-and-retrieval/SelfRAG_4bit_Demo.ipynb)
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/abhis-28/
+agentic_ai_labs/blob/main/01-rag-and-retrieval/SelfRAG_4bit_Demo.ipynb)
 
 Runs the real Self-RAG model (`selfrag/selfrag_llama2_7b`, loaded in 4-bit on a free Colab T4 GPU).
 It writes special **reflection tokens** such as `[No Retrieval]`, `[Relevant]`, `[Fully supported]`
@@ -127,8 +126,8 @@ run downloads the roughly 13 GB model, which takes several minutes.
 Model from the Self-RAG paper (Asai et al., 2023).
 
 ## RAG Assessment with RAGAS
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/<abhis-28>/<
-agentic_ai_labs>/blob/main/01-rag-and-retrieval/RAG_Assessment_RAGAS_Demo.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/abhis-28/
+agentic_ai_labs/blob/main/01-rag-and-retrieval/RAG_Assessment_RAGAS_Demo.ipynb)
 
 A RAG system can fail in different ways: noisy retrieval, missing information, hallucination or an off-topic answer. This notebook builds a small RAG system over a healthcare text (6 sentence chunks, `all-MiniLM-L6-v2` embeddings). It writes the four RAGAS metrics from scratch, using Groq `gpt-oss-20b` inside the RAG system and a bigger `gpt-oss-120b` as the judge. It then breaks the system on purpose in five ways, using 3 questions with ground-truth answers.
 
