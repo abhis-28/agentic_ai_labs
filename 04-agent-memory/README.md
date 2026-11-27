@@ -68,7 +68,7 @@ Episodic memory is a persistent record of what happened in past sessions. It liv
 Colab secret: `agentic_ai` (Groq API key). Runtime → Run all. Add `episodes.json` to `.gitignore`.
 
 ## Semantic Memory in Agentic AI
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/abhis-28/agentic_ai_labs/<repo>/blob/main/04-agent-memory/Semantic_Memory_Demo.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/abhis-28/agentic_ai_labs/blob/main/04-agent-memory/Semantic_Memory_Demo.ipynb)
 
 Semantic memory is knowledge an agent can reuse across conversations. This notebook compares two kinds, using real Wikipedia pages, Groq `gpt-oss-20b`, `all-MiniLM-L6-v2` embeddings and Mem0 with a local Qdrant store.
 
