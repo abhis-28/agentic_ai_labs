@@ -30,7 +30,7 @@ Working memory is everything inside the LLM's context window: the system prompt,
 - Selective retention is only as good as its scorer. A wrong low score permanently drops needed information.
 - Single run, single rule, one model, so these are demonstrations, not benchmarks.
 
-- # Episodic Memory in Agentic AI
+  # Episodic Memory in Agentic AI
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/abhis-28/agentic_ai_labs/blob/main/04-agent-memory/Episodic_Memory_Demo.ipynb)
 
