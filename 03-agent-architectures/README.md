@@ -26,7 +26,7 @@ Three real peer agents — billing (policy knowledge), research (live web search
 
 **Caveats:** Q3's empty answer and Q2's non-responsive final reply are real outputs from this run, not edge cases I constructed — they're a direct illustration of the tradeoff named in this notebook's own comparison section (no central synthesis means coherence isn't guaranteed). A different run, or a reworded Q3, might route through the calculator correctly; this notebook doesn't claim the failure is deterministic, only that it happened here and is worth knowing about before trusting a swarm architecture with multi-step numeric tasks.
 
-**Setup:** needs only a Groq API key (`groq_api` in Colab secrets) and a live internet connection for the real web-search tool. No GPU needed.
+**Setup:** needs only a Groq API key (`agentic_ai` in Colab secrets) and a live internet connection for the real web-search tool. No GPU needed.
 
 ### 🏢 Hierarchical Multi-Agent Pattern: CEO → Directors → workers, vs. one flat supervisor
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/abhis-28/agentic_ai_labs/blob/main/03-agent-architectures/Hierarchical_Agent_Demo.ipynb)
@@ -40,7 +40,6 @@ The same real task (an NVIDIA AI-chip investment brief) run two ways: **hierarch
 
 **Caveats:** this notebook's two runs may have been captured under slightly different versions of the shared `run_team()` function (the flat run shows a context-trimming safeguard firing; the hierarchical run's saved output doesn't, despite exceeding the same threshold) — restart and re-run both before treating the character-count comparison as a strict apples-to-apples result. 7 workers is also smaller than the "~10 workers" scale the notes use to describe coherence breakdown, so a flat supervisor holding up reasonably well here doesn't contradict the notes — it may just mean this task wasn't large enough to break it.
 
-**Setup:** needs only a Groq API key (`groq_api` in Colab secrets) and a live internet connection for the real web-search tool. No GPU needed.
+**Setup:** needs only a Groq API key (`agentic_ai` in Colab secrets) and a live internet connection for the real web-search tool. No GPU needed.
 firm conclusions from any single pass.
 
-**Setup:** needs only a Groq API key (`groq_api` in Colab secrets) and a live internet connection in Colab for the real web-search tool. No GPU needed.
